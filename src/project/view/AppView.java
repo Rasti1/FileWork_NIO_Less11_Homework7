@@ -13,7 +13,7 @@ public class AppView {
 
 
         System.out.println("""
-               What do you want to do:
+               \nWhat do you want to do:
                1 - Create and Write in;
                2 - Read from;
                0 - Exit.""");
@@ -43,10 +43,9 @@ public class AppView {
 
     }
 
-    public String displayFileContent(String content) {
+    public void displayFileContent(String content) {
 
-        System.out.println("Text in file: ");
-        return content;
+        System.out.println("\nText in file: " + content);
 
     }
 

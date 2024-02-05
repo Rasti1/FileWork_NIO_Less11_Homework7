@@ -24,7 +24,13 @@ public class AppController {
                     view.getOutput(write.writeInFile(writeInfo[0], writeInfo[1]));
 
                 }
-                case 2 -> view.getOutput(read.readFromFile(view.getReadInfo()));
+                case 2 -> {
+
+                    String fName = view.getReadInfo();
+                    String fileContent = read.readFromFile(fName);
+                    view.displayFileContent(fileContent);
+
+                }
                 case 0 -> {
 
                     view.getOutput("App closed.");
